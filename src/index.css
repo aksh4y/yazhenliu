@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes waveMotion {
+  0% {
+    transform: translateX(0) scaleY(1);
+  }
+  33% {
+    transform: translateX(-11.11%) scaleY(1.05);
+  }
+  66% {
+    transform: translateX(-22.22%) scaleY(0.95);
+  }
+  100% {
+    transform: translateX(-33.33%) scaleY(1);
+  }
+}
+
+@keyframes waveMotionAlt {
+  0% {
+    transform: translateX(0) scaleY(1) scaleX(1);
+  }
+  33% {
+    transform: translateX(-11%) scaleY(0.9) scaleX(1.05);
+  }
+  66% {
+    transform: translateX(-22%) scaleY(1.2) scaleX(0.95);
+  }
+  100% {
+    transform: translateX(-33.33%) scaleY(1) scaleX(1);
+  }
+}
+
+.animate-waveMotion {
+  animation: waveMotion 12s linear infinite;
+  transform-origin: center bottom;
+}
+
+.animate-waveMotionAlt {
+  animation: waveMotionAlt 12s ease-in-out infinite;
+  transform-origin: center bottom;
+}
